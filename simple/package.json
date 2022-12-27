@@ -7,14 +7,14 @@
     "start": "node src/index.js",
     "docker:ls": "docker image ls",
     "docker:ps": "docker container ls",
-    "docker:build": "docker build --file Dockerfile --tag=helloworld .",
-    "docker:run": "docker run -p 3000:3000 -d --name=helloworld helloworld",
-    "docker:stop": "docker stop helloworld",
-    "docker:shell": "docker run -it -p 3000:3000 helloworld bash",
+    "docker:build": "docker build --file Dockerfile --tag=dockerhub14397/nodejs-test-pip:nodejs-latest .",
+    "docker:run": "docker run -p 4000:4000 -d --name=dockerhub14397/nodejs-test-pip dockerhub14397/nodejs-test-pip",
+    "docker:stop": "docker stop dockerhub14397/nodejs-test-pip",
+    "docker:shell": "docker run -it -p 4000:4000 dockerhub14397/nodejs-test-pip bash",
     "docker:remove-all": "docker rm --force $(docker ps -a -q) && docker rmi --force $(docker images -q)"
   },
   "keywords": [],
-  "author": "ashley@codecapers.com.au",
+  "author": "vishnu@acs",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
